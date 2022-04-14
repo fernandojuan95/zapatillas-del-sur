@@ -1,0 +1,198 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 64.5%;
+}
+.titulo{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: block;
+    justify-content: center;
+    font-size: 50px;
+    background-image: linear-gradient(to top, rgb(75, 111, 75), rgb(203, 203, 146));
+}
+.logozapa{
+    display: flex;
+    justify-content: right;
+}
+.footer{
+    background-image: linear-gradient(grey, blue);
+    display: flex;
+    justify-content: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 35px;
+    display: flex;
+    align-items: flex-end;
+}
+.parrafo{
+   justify-content: right;
+    font-family: sans-serif;
+    font-size: 25px;
+    width: 50%;
+}
+body{
+    background-color: #A4D4B4
+}
+.menu--hombre li{
+    list-style: none;
+}
+.menu--mujer li{
+    list-style: none;
+}
+.indice li{
+    list-style: none;
+}
+.indice li a:hover{
+    color: rgb(42, 69, 165);
+}
+.hombre{
+  background-image: linear-gradient(to right, red, yellow);
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 35px;
+}
+.titulohombre{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+}
+.parrafo--hombre{
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+}
+.home{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    color: darkblue;
+}
+.mujer{
+    background-image: linear-gradient(to right, red, yellow);
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 35px;
+}
+.titulo--mujer{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+}
+.parrafo--mujer{
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: linear-gradient(to top, rgb(62, 109, 228), white);
+}
+.producto{
+    background-image: linear-gradient(to right, red, yellow);
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 35px;
+}
+.titulo--producto{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+}
+.parrafo--producto{
+    background-image: linear-gradient(to top, rgb(62, 109, 228), white);
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+}
+.quienes--somos{
+    background-color: beige;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 35px;
+}
+.titulo--quienes{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+}
+.parrafo--quienes{
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    background-image: linear-gradient(to top, rgb(62, 109, 228), white);
+}
+.indice{
+    display:  flex;
+    justify-content: space-around;
+    padding: 120px 300px;
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+    height: 50%;
+}
+.indice li a{
+    background-color: black;
+    color: aliceblue;
+    font-size: 35px;
+    display: block;
+    text-decoration: none;
+}
+.despliegue{
+    display: none;
+    overflow: hidden;
+    transition: all 1s;
+}
+.indice :hover  .despliegue {
+    display: block;
+}
+header{
+    grid-area: header;
+}
+.despliegue{
+    grid-area: despliegue;
+}
+.parrafo{
+    grid-area: parrafo;
+}
+.footer{
+    grid-area: footer;
+}
+.indice{
+    grid-area: indice;
+}
+@media screen and (max-width:500px){
+    .media{
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas: 
+        "header header"
+        "indice indice"
+        "parrafo parrafo"
+        "footer footer";
+        }
+    .indice{
+        flex-direction: column;
+        align-items: flex-start;
+    }    
+}
+@media screen and (max-width: 700px){
+    .media{
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-areas: 
+        "header header header"
+        "indice indice header"
+        "parrafo parrafo parrafo"
+        "footer footer footer";
+        }
+    .indice{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+@media screen and (max-width: 900px){
+    .media{
+        grid-template-columns: 1fr 3fr 1fr 1fr;
+        grid-template-areas: 
+        "header header header header"
+        "indice indice header header"
+        "parrafo parrafo parrafo parrafo"
+        "footer footer footer footer";
+        }
+    .indice{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+    
